@@ -10,7 +10,7 @@ body{
   margin: 0;
 }
 
-#guess-the-number{
+.guess-the-number{
   text-align: center;
   border-bottom: 1px solid black;
   margin: 0;
@@ -28,7 +28,7 @@ body{
   padding-right: 10px;
 }
 
-#container{
+.container{
   width: 20%;
   font-size: 40px;
   color: red;
@@ -41,12 +41,12 @@ body{
   padding-bottom: 25px;
 }
 
-#user-input-number{
+.user-input-number{
   display:inline-grid;
 
 }
 
-#number,#test-the-number,#name,#save-button,#message-gide{
+.number,.test-the-number,.name,.save-button,.message-gide{
   -webkit-appearance: none;
   -moz-appearance:    none;
   appearance:         none;
@@ -54,7 +54,7 @@ body{
   margin-bottom: 15px;
 }
 
-#number{
+.number{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -62,29 +62,29 @@ body{
   padding: 5px;
 }
 
-#name, #save-button{
+.name, .save-button{
   width: 40%;
   padding: 5px;
   margin-top: 10px;
 }
 
 
-#test-the-number, #save-button{
+.test-the-number, .save-button{
   border-radius: 3px;
   background-color: white;
   font-size: 14px
 }
 
-#test-the-number{
+.test-the-number{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
-#save-button{
+.save-button{
   padding: 1px;
   margin-left: 3px;
 }
-#message-gide{
+.message-gide{
   padding: 7px;
   border: 1px solid #7300e6;
   color: #7300e6;
@@ -92,12 +92,12 @@ body{
   margin: 25px;
 }
 
-#history{
+.history{
   display: flex;
   flex-direction: column;
   margin-left: 70px;
 }
-#history-information{
+.history-information{
   margin-top: 10px;
   margin-left: -25px;
 }
@@ -109,22 +109,22 @@ body{
     flex-direction: row;
     justify-content: center;
   }
-  #guess-the-number{
+  .guess-the-number{
     border:none;
     flex-grow: 3;
     border-right: 1px solid black;
   }
-  #history{
+  .history{
     flex-grow: 1;
     align-self: stretch;
   }
   .text-game{
     padding-right: 80px;
   }
-  #name,#save-button{
+  .name,.save-button{
     width: 30%;
   }
-  #number,#test-the-number{
+  .number,.test-the-number{
     width: 100%;
   }
 }
