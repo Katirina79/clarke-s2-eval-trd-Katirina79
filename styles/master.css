@@ -60,6 +60,7 @@ body{
   margin-right: auto;
   margin-bottom: 25px;
   padding: 5px;
+  text-align: center;
 }
 
 .name, .save-button{
@@ -67,7 +68,6 @@ body{
   padding: 5px;
   margin-top: 10px;
 }
-
 
 .test-the-number, .save-button{
   border-radius: 3px;
@@ -79,6 +79,9 @@ body{
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+.hidden{
+  display: none;
 }
 .save-button{
   padding: 1px;
@@ -102,29 +105,35 @@ body{
   margin-left: -25px;
 }
 
-@media all and (min-width: 901px){
+@media all and (min-width: 900px){
   body{
     height: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: 1rem;
   }
   .guess-the-number{
     border:none;
     flex-grow: 3;
     border-right: 1px solid black;
   }
+  .container{
+    font-size: 3rem;
+    margin-left: 100px;
+  }
   .history{
     flex-grow: 1;
     align-self: stretch;
   }
   .text-game{
-    padding-right: 80px;
+    margin-left: -80px;
   }
   .name,.save-button{
     width: 30%;
   }
   .number,.test-the-number{
     width: 100%;
+    text-align: center;
   }
 }
