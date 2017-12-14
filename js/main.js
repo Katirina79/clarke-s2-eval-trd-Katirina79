@@ -13,7 +13,7 @@ function init(){
   button.addEventListener('click',checkNumber);
   var saveButton = document.querySelector('.save-button');
   saveButton.addEventListener('click', onclickButton);
-}
+};
 
 function checkNumber() {
     var userNumber = document.querySelector('.number');
@@ -22,29 +22,43 @@ function checkNumber() {
     var userNumberValue = userNumber.value;
     var numberconverse = parseInt(userNumberValue);
 
-    counter += 1;
-    container.innerHTML = counter;
+
     if (numberconverse > resultRandom){
+      counter += 1;
+      container.innerHTML = counter;
     message.innerHTML = 'demasiado alto';
   }else if (numberconverse < resultRandom){
+    counter += 1;
+    container.innerHTML = counter;
     message.innerHTML = 'demasiado bajo';
-  }else{
+  }else if (numberconverse ===resultRandom) {
     message.innerHTML = 'acertado';
     var userName = document.querySelector('.user-input-name');
     userName.classList.toggle('hidden');
   };
 };
 
+
+
 function onclickButton() {
   historyList();
   resetGame();
-}
+};
+
+var winner = [];
 
 function historyList() {
   var userName = document.querySelector('.user-input-name .name');
   var userNameValue = userName.value;
   var historyInfo = document.querySelector('.history-information');
-  historyInfo.innerHTML += '<li>' + userNameValue + '-' + counter +' intentos</li>';
+
+  var player = {
+    name:userNameValue,
+    trials:counter
+  };
+
+  historyInfo.innerHTML += '<li>' + player.name + '-' + player.trials +' intentos</li>';
+  winner.push(player);
 };
 
 function resetGame() {
